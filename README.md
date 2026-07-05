@@ -7,7 +7,7 @@
 
 Aplicación que automatiza la **reválida anual de la clasificación de bases de datos**: ingesta la clasificación desde un archivo JSON y la relación usuario–manager desde un CSV, consolida todo en una base SQLite normalizada y **notifica por email a los managers** responsables de las bases críticas para obtener su OK — dejando cada hallazgo anómalo persistido y auditable.
 
-> Desarrollada como solución al challenge Caso- JSON y CSV enBasedeDatos
+> Desarrollada como solución al Challenge Desarrollo - JSON y CSV en Base de Datos
 
 
 ## ¿Qué hace la aplicación?
