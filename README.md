@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Dependencias](https://img.shields.io/badge/dependencias-0%20externas-success)
 
-Aplicación que automatiza la **reválida anual de la clasificación de bases de datos**: ingesta la clasificación desde un archivo JSON y la relación usuario–manager desde un CSV, consolida todo en una base SQLite normalizada y **notifica por email a los managers** responsables de las bases críticas para obtener su validación, dejando cada hallazgo persistido y auditable.
+Aplicación que automatiza la **reválida anual de la clasificación de bases de datos**: ingesta la clasificación desde un archivo JSON y la relación usuario–manager desde un CSV, consolida todo en una base SQLite normalizada y **notifica por email a los managers** responsables de las bases críticas para obtener su aprobación, dejando cada hallazgo persistido y auditable.
 
 > Desarrollada como solución al Challenge Desarrollo - JSON y CSV en Base de Datos
 
@@ -15,7 +15,7 @@ Aplicación que automatiza la **reválida anual de la clasificación de bases de
 1. Lee un archivo **JSON** (`data/databases.json`) con la clasificación de las bases de datos, tolerando campos incompletos o inválidos.
 2. Lee un archivo **CSV** (`data/users.csv`) con la relación usuario → manager (`row_id, user_id, user_state, user_manager`).
 3. Cruza ambas fuentes y persiste todo en una base **SQLite normalizada**: por cada base queda su nombre, el email del owner, el email del manager y su clasificación.
-4. Por cada base clasificada como **high** — o con una **clasificación no reconocida** (política fail-safe, ver más abajo) — envía un email al manager del owner pidiendo su OK.
+4. Por cada base clasificada como **high** — o con una **clasificación no reconocida** (política fail-safe, ver más abajo) — envía un email al manager del owner pidiendo su aprobación.
 5. Todo hallazgo que requiera atención humana queda **persistido en la base de datos**, no solo en el log.
 
 ## Herramientas y decisiones técnicas
