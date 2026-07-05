@@ -1,0 +1,4 @@
+output/
+revalidation.db
+__pycache__/
+*.pyc
