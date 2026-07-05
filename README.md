@@ -5,7 +5,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 ![Dependencias](https://img.shields.io/badge/dependencias-0%20externas-success)
 
-Aplicación que automatiza la **reválida anual de la clasificación de bases de datos**: ingesta la clasificación desde un archivo JSON y la relación usuario–manager desde un CSV, consolida todo en una base SQLite normalizada y **notifica por email a los managers** responsables de las bases críticas para obtener su OK — dejando cada hallazgo anómalo persistido y auditable.
+Aplicación que automatiza la **reválida anual de la clasificación de bases de datos**: ingesta la clasificación desde un archivo JSON y la relación usuario–manager desde un CSV, consolida todo en una base SQLite normalizada y **notifica por email a los managers** responsables de las bases críticas para obtener su validación, dejando cada hallazgo persistido y auditable.
 
 > Desarrollada como solución al Challenge Desarrollo - JSON y CSV en Base de Datos
 
