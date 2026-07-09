@@ -1,9 +1,9 @@
 row_id,user_id,user_state,user_manager
-1,jperez@mercadolibre.com,active,rmartinez@mercadolibre.com
-2,mgomez@mercadolibre.com,active,rmartinez@mercadolibre.com
-3,lrodriguez@mercadolibre.com,active,pfernandez@mercadolibre.com
-4,asuarez@mercadolibre.com,active,pfernandez@mercadolibre.com
-5,cramirez@mercadolibre.com,inactive,ggonzalez@mercadolibre.com
-6,dtorres@mercadolibre.com,active,ggonzalez@mercadolibre.com
-7,fherrera@mercadolibre.com,active,rmartinez@mercadolibre.com
-8,svargas@mercadolibre.com,active,
+1,jperez@example.com,active,rmartinez@example.com
+2,mgomez@example.com,active,rmartinez@example.com
+3,lrodriguez@example.com,active,pfernandez@example.com
+4,asuarez@example.com,active,pfernandez@example.com
+5,cramirez@example.com,inactive,ggonzalez@example.com
+6,dtorres@example.com,active,ggonzalez@example.com
+7,fherrera@example.com,active,rmartinez@example.com
+8,svargas@example.com,active,

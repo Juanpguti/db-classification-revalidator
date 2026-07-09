@@ -148,10 +148,17 @@ Se eligió la opción 2, el principio clásico de seguridad de *fallar hacia el 
 - El caso queda también persistido en `review_flags`.
 - Distinto es el caso de la clasificación **ausente** (campo faltante): ahí no hay ningún valor que validar, se guarda como `unknown`, no se notifica, y queda flag de revisión manual.
 
+## Limitaciones y mejoras futuras
+
+- - **Verificación del OK**: un reply con "OK" no es una validación suficiente. No autentica al remitente (cualquiera con acceso al buzón puede responder, y el remitente de un correo es falsificable), no queda registrado en ningún sistema consultable y no permite hacer seguimiento de quién confirmó y quién no. 
+- **Procesamiento de respuestas**: la aplicación envía las solicitudes pero no lee el buzón de respuestas; ese flujo (IMAP + actualización de estado) queda fuera del alcance del challenge.
+- **Datos de prueba con dominio reservado**: los emails inventados usan `@example.com`, dominio reservado por el estándar RFC 2606 para documentación y pruebas, que nunca resuelve a buzones reales.
+- **Referencias posicionales**: los hallazgos sin nombre de base se referencian por posición en el JSON (`json_record_#N`); con archivos que cambian de orden entre corridas convendría un hash del contenido del registro.
+
 ## Supuestos
 
 1. **Datos inventados:** el enunciado indica inventar los datos. Ambos archivos incluyen casos incompletos, inválidos y límite para demostrar el manejo de errores.
-2. **Emails no reales:** no se envían correos a destinatarios reales; se usa MailHog o cualquier SMTP configurable por variables de entorno.
+2. **Emails no reales:** los datos inventados usan el dominio reservado `@example.com` y los correos se capturan en MailHog (o cualquier SMTP configurable por variables de entorno); nunca se envía nada a destinatarios reales.
 3. **Identidad de usuarios:** `user_id` del CSV y `owner_email` del JSON son el mismo identificador (email corporativo).
 4. **Idempotencia:** ejecutar la aplicación varias veces no duplica registros (upserts por claves únicas y restricciones UNIQUE en los flags).
 5. **Persistir antes de notificar:** el guardado en base ocurre siempre antes del envío de correos; una falla del SMTP nunca pierde datos.

@@ -1,54 +1,54 @@
 [
   {
     "db_name": "payments_core",
-    "owner_email": "jperez@mercadolibre.com",
+    "owner_email": "jperez@example.com",
     "classification": "high"
   },
   {
     "db_name": "shipping_orders",
-    "owner_email": "mgomez@mercadolibre.com",
+    "owner_email": "mgomez@example.com",
     "classification": "high"
   },
   {
     "db_name": "user_sessions",
-    "owner_email": "lrodriguez@mercadolibre.com",
+    "owner_email": "lrodriguez@example.com",
     "classification": "medium"
   },
   {
     "db_name": "product_catalog",
-    "owner_email": "asuarez@mercadolibre.com",
+    "owner_email": "asuarez@example.com",
     "classification": "low"
   },
   {
     "db_name": "fraud_detection",
-    "owner_email": "cramirez@mercadolibre.com",
+    "owner_email": "cramirez@example.com",
     "classification": "high"
   },
   {
     "db_name": "marketing_campaigns",
-    "owner_email": "dtorres@mercadolibre.com"
+    "owner_email": "dtorres@example.com"
   },
   {
     "db_name": "audit_logs",
     "classification": "high"
   },
   {
-    "owner_email": "fherrera@mercadolibre.com",
+    "owner_email": "fherrera@example.com",
     "classification": "medium"
   },
   {
     "db_name": "customer_pii",
-    "owner_email": "svargas@mercadolibre.com",
+    "owner_email": "svargas@example.com",
     "classification": "high"
   },
   {
     "db_name": "internal_wiki",
-    "owner_email": "nocsv@mercadolibre.com",
+    "owner_email": "nocsv@example.com",
     "classification": "high"
   },
   {
-  "db_name": "legacy_exports",
-  "owner_email": "jperez@mercadolibre.com",
-  "classification": "critical"
-}
+    "db_name": "legacy_exports",
+    "owner_email": "jperez@example.com",
+    "classification": "critical"
+  }
 ]

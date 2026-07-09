@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 SMTP_HOST = os.getenv("SMTP_HOST", "localhost")
 SMTP_PORT = int(os.getenv("SMTP_PORT", "1025"))
-MAIL_FROM = os.getenv("MAIL_FROM", "seguridad-informatica@mercadolibre.com")
+MAIL_FROM = os.getenv("MAIL_FROM", "seguridad-informatica@example.com")
 
 SUBJECT_HIGH = "[Reválida anual] OK requerido: base '{db_name}' clasificada HIGH"
 SUBJECT_FAILSAFE = ("[Reválida anual] Validación urgente: base '{db_name}' con "
@@ -34,7 +34,7 @@ Por favor respondé este correo con tu OK para confirmar que la
 clasificación es correcta.
 
 Gracias,
-Equipo de Seguridad Informática - Mercado Libre
+Equipo de Seguridad Informática 
 """
 
 BODY_FAILSAFE = """\
@@ -53,7 +53,7 @@ Por favor respondé este correo confirmando la clasificación correcta
 de la base.
 
 Gracias,
-Equipo de Seguridad Informática - Mercado Libre
+Equipo de Seguridad Informática 
 """
 
 
