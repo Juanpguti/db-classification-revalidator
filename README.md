@@ -150,7 +150,7 @@ Se eligió la opción 2, el principio clásico de seguridad de *fallar hacia el 
 
 ## Limitaciones y mejoras futuras
 
-- - **Verificación del OK**: un reply con "OK" no es una validación suficiente. No autentica al remitente (cualquiera con acceso al buzón puede responder, y el remitente de un correo es falsificable), no queda registrado en ningún sistema consultable y no permite hacer seguimiento de quién confirmó y quién no. 
+- **Verificación del OK**: un reply con "OK" no es una validación suficiente. No autentica al remitente (cualquiera con acceso al buzón puede responder, y el remitente de un correo es falsificable), no queda registrado en ningún sistema consultable y no permite hacer seguimiento de quién confirmó y quién no. 
 - **Procesamiento de respuestas**: la aplicación envía las solicitudes pero no lee el buzón de respuestas; ese flujo (IMAP + actualización de estado) queda fuera del alcance del challenge.
 - **Datos de prueba con dominio reservado**: los emails inventados usan `@example.com`, dominio reservado por el estándar RFC 2606 para documentación y pruebas, que nunca resuelve a buzones reales.
 - **Referencias posicionales**: los hallazgos sin nombre de base se referencian por posición en el JSON (`json_record_#N`); con archivos que cambian de orden entre corridas convendría un hash del contenido del registro.
